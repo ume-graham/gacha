@@ -1,0 +1,30 @@
+[
+    {
+        "label": "Feeling",
+        "values": [
+            "Whimsical",
+            "Sombre",
+            "Exciting",
+            "Relaxing",
+            "Stressful"
+        ]
+    },
+    {
+        "label": "Mechanic",
+        "values": [
+            "Spawner",
+            "Lock and Key",
+            "Oscillation"
+        ]
+    },
+    {
+        "label": "Genre",
+        "values": [
+            "Puzzle",
+            "Adventure",
+            "Platformer",
+            "Racing",
+            "Maze"
+        ]
+    }
+]
