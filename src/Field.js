@@ -23,8 +23,8 @@ const Field = ({ label, options, cycling = false }) => {
 
   return (
     <div className="p-4">
-      <label className="text-xs uppercase text-gray-700 tracking-wide">
-        {label}
+      <label className="text-xs uppercase text-gray-700 tracking-wide block min-h-4 py-1">
+        {label || <span>&nbsp;</span>}
       </label>
 
       <div className="relative h-16 overflow-hidden rounded text-2xl shadow-inner
@@ -33,8 +33,8 @@ const Field = ({ label, options, cycling = false }) => {
             className="transition transition-transform duration-100"
             style={{ transform: `translateY(-${selectedIndex * 4}rem)` }}
         >
-          {options.map(option => (
-            <li key={option}>
+          {options.map((option, i) => (
+            <li key={i}>
               <p className="p-4 whitespace-nowrap">
                 {option}
               </p>

@@ -11,11 +11,16 @@ module.exports = {
       colors: {
         gray: colors.blueGray,
         lightblue: colors.lightBlue
+      },
+      zIndex: {
+        '-10': '-10'
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      rotate: ['group-hover']
+    },
   },
   plugins: [],
 }
