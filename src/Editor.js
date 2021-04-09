@@ -5,7 +5,7 @@ import FieldEditor from './FieldEditor';
 const ActionButton = ({ children, onClick }) => (
   <button
     type="button"
-    className="w-8 h-8 ml-4 hover:text-gray-500 focus:text-gray-500 focus:outline-none"
+    className="w-10 h-10 ml-4 rounded bg-lightblue-900 p-2 text-gray-100 hover:bg-lightblue-700 focus:bg-lightblue-700 focus:outline-none"
     onClick={onClick}
   >
     {children}
@@ -48,7 +48,7 @@ const Editor = ({ fields, onChange }) => {
   return (
     <div className={`absolute right-0 top-0 bottom-0 shadow-lg transform transition transition-translate ease-in-out duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
       <div className="relative bg-gray-300 h-full text-gray-900 px-6 py-12 rounded-bl-lg">
-        <button className="absolute group w-10 h-10 top-0 left-0 shadow-lg -z-10 transform -translate-x-full bg-gray-300 rounded-l-md mt-6 p-2 focus:text-gray-500 focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
+        <button className="absolute group w-10 h-10 top-0 left-0 shadow-lg -z-10 transform -translate-x-full bg-gray-300 rounded-l mt-6 p-2 text-gray-700 focus:text-gray-500 focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
           <svg xmlns="http://www.w3.org/2000/svg" className="fill-current transition-transform transform rotate-0 group-hover:rotate-180" viewBox="0 0 24 24"><path d="M24 13.616v-3.232c-1.651-.587-2.694-.752-3.219-2.019v-.001c-.527-1.271.1-2.134.847-3.707l-2.285-2.285c-1.561.742-2.433 1.375-3.707.847h-.001c-1.269-.526-1.435-1.576-2.019-3.219h-3.232c-.582 1.635-.749 2.692-2.019 3.219h-.001c-1.271.528-2.132-.098-3.707-.847l-2.285 2.285c.745 1.568 1.375 2.434.847 3.707-.527 1.271-1.584 1.438-3.219 2.02v3.232c1.632.58 2.692.749 3.219 2.019.53 1.282-.114 2.166-.847 3.707l2.285 2.286c1.562-.743 2.434-1.375 3.707-.847h.001c1.27.526 1.436 1.579 2.019 3.219h3.232c.582-1.636.75-2.69 2.027-3.222h.001c1.262-.524 2.12.101 3.698.851l2.285-2.286c-.744-1.563-1.375-2.433-.848-3.706.527-1.271 1.588-1.44 3.221-2.021zm-12 2.384c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"/></svg>
         </button>
 

@@ -3,7 +3,7 @@ import { useState } from 'react';
 const ControlButton = ({ children, className, onClick }) => (
   <button
     type="button"
-    className={`w-8 h-8 p-2 text-gray-100 bg-gray-700 hover:bg-gray-500 focus:bg-gray-500 focus:outline-none ${className}`}
+    className={`w-8 h-8 p-2 text-gray-100 bg-gray-600 hover:bg-gray-500 focus:bg-gray-500 focus:outline-none ${className}`}
     onClick={onClick}
   >
     {children}
@@ -51,7 +51,7 @@ const FieldEditor = ({ field, onChange }) => {
           onChange={handleLabelChange}
           className="w-52 text-gray-900 bg-gray-100 shadow-inner h-8 px-2"
         />
-        <ControlButton onClick={handleFieldDelete} className="rounded-r-md">
+        <ControlButton onClick={handleFieldDelete} className="rounded-r">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="fill-current"
@@ -63,7 +63,7 @@ const FieldEditor = ({ field, onChange }) => {
       </div>
 
       <div
-        className="w-52 mx-8 bg-gray-100 transition-all duration-300 ease-in-out shadow overflow-y-hidden rounded-b-md"
+        className="w-52 mx-8 bg-gray-100 transition-all duration-300 ease-in-out shadow overflow-y-hidden rounded-b"
         style={{ height: `${isExpanded ? values.length * 2 + 3 : 0}rem` }}
       >
         <ul>
@@ -94,7 +94,7 @@ const FieldEditor = ({ field, onChange }) => {
         <div className="flex justify-end mx-3 my-2">
           <button
             type="button"
-            className="w-6 h-6 hover:text-gray-500 focus:text-gray-500 focus:outline-none"
+            className="w-8 h-8 text-gray-100 bg-gray-600 p-2 rounded hover:bg-gray-500 focus:bg-gray-500 focus:outline-none"
             onClick={addValue}
           >
             <svg
