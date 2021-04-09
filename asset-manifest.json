@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/gacha/static/css/main.02788541.chunk.css",
-    "main.js": "/gacha/static/js/main.2649c4f2.chunk.js",
-    "main.js.map": "/gacha/static/js/main.2649c4f2.chunk.js.map",
+    "main.css": "/gacha/static/css/main.6b760ddc.chunk.css",
+    "main.js": "/gacha/static/js/main.674d5f7a.chunk.js",
+    "main.js.map": "/gacha/static/js/main.674d5f7a.chunk.js.map",
     "runtime-main.js": "/gacha/static/js/runtime-main.eab03db1.js",
     "runtime-main.js.map": "/gacha/static/js/runtime-main.eab03db1.js.map",
-    "static/js/2.21162c2e.chunk.js": "/gacha/static/js/2.21162c2e.chunk.js",
-    "static/js/2.21162c2e.chunk.js.map": "/gacha/static/js/2.21162c2e.chunk.js.map",
+    "static/js/2.1c327c2e.chunk.js": "/gacha/static/js/2.1c327c2e.chunk.js",
+    "static/js/2.1c327c2e.chunk.js.map": "/gacha/static/js/2.1c327c2e.chunk.js.map",
     "index.html": "/gacha/index.html",
-    "static/css/main.02788541.chunk.css.map": "/gacha/static/css/main.02788541.chunk.css.map",
-    "static/js/2.21162c2e.chunk.js.LICENSE.txt": "/gacha/static/js/2.21162c2e.chunk.js.LICENSE.txt"
+    "static/css/main.6b760ddc.chunk.css.map": "/gacha/static/css/main.6b760ddc.chunk.css.map",
+    "static/js/2.1c327c2e.chunk.js.LICENSE.txt": "/gacha/static/js/2.1c327c2e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.eab03db1.js",
-    "static/js/2.21162c2e.chunk.js",
-    "static/css/main.02788541.chunk.css",
-    "static/js/main.2649c4f2.chunk.js"
+    "static/js/2.1c327c2e.chunk.js",
+    "static/css/main.6b760ddc.chunk.css",
+    "static/js/main.674d5f7a.chunk.js"
   ]
 }
