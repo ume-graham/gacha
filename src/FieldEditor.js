@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const ControlButton = ({ children, className, onClick }) => (
   <button
@@ -12,7 +12,16 @@ const ControlButton = ({ children, className, onClick }) => (
 
 const FieldEditor = ({ field, onChange }) => {
   const { label, values } = field;
+  const listRef = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [recentlyAddedValue, setRecentlyAddedValue] = useState(false);
+
+  useEffect(() => {
+    if (recentlyAddedValue) {
+      listRef.current.lastChild.querySelector('input').focus();
+      setRecentlyAddedValue(false);
+    }
+  }, [recentlyAddedValue, setRecentlyAddedValue, listRef]);
 
   const handleLabelChange = e => onChange({ ...field, label: e.target.value });;
 
@@ -28,10 +37,13 @@ const FieldEditor = ({ field, onChange }) => {
     values: [...values.slice(0, index), ...values.slice(index + 1)]
   });
 
-  const addValue = () => onChange({
-    ...field,
-    values: [...values, '']
-  });
+  const addValue = () => {
+      setRecentlyAddedValue(true);
+      onChange({
+        ...field,
+        values: [...values, '']
+      });
+  };
 
   return (
     <div>
@@ -66,7 +78,7 @@ const FieldEditor = ({ field, onChange }) => {
         className="w-52 mx-8 bg-gray-100 transition-all duration-300 ease-in-out shadow overflow-y-hidden rounded-b"
         style={{ height: `${isExpanded ? values.length * 2 + 3 : 0}rem` }}
       >
-        <ul>
+        <ul ref={listRef}>
           {values.map((value, i) => (
             <li key={i} className="h-8 flex items-center justify-around px-2">
               <input
